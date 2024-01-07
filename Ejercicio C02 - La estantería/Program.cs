@@ -7,13 +7,14 @@ namespace Ejercicio_C02___La_estantería
         static void Main(string[] args)
         {
             // Creo un estante
-            Estante estante = new Estante(1, 3);
+            Estante estante = new Estante(1, 5);
 
             // Creo 4 productos
             Producto p1 = new Producto("Pepsi", "PESDS97413", (float)18.5);
             Producto p2 = new Producto("Coca-Cola", "COSDS55752", (float)11.5);
             Producto p3 = new Producto("Manaos", "MASDS51292", (float)20.5);
             Producto p4 = new Producto("Crush", "CRSDS54861", (float)10.75);
+            Producto p5 = new Producto("Pepsi", "PESDS97413", (float)18.5);
 
             // Agrego los productos al estante
             if (estante + p1)
@@ -60,7 +61,15 @@ namespace Ejercicio_C02___La_estantería
             {
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p4.GetMarca(), (string)p4, p4.GetPrecio());
             }
-            if(estante == p1)
+            if (estante + p5)
+            {
+                Console.WriteLine("Agregó {0} {1} {2}", p5.GetMarca(), (string)p5, p5.GetPrecio());
+            }
+            else
+            {
+                Console.WriteLine("¡NO agregó {0} {1} {2}!", p5.GetMarca(), (string)p5, p5.GetPrecio());
+            }
+            if (estante == p1)
             {
                 Console.WriteLine("{0} está en el estante.", p1.GetMarca());
             }
@@ -78,6 +87,24 @@ namespace Ejercicio_C02___La_estantería
             if (estante == p3)
             {
                 Console.WriteLine($"{p3.GetMarca()} está en el estante");
+            }
+
+            if(p1 == p4)
+            {
+                Console.WriteLine("Ambos productos son iguales");
+            }
+            else
+            {
+                Console.WriteLine("Los productos son distintos");
+            }
+
+            if (p1 == "Pepsi")
+            {
+                Console.WriteLine($"Ambos productos son {p1.GetMarca()}");
+            }
+            else
+            {
+                Console.WriteLine("Los productos son distintos");
             }
         }
     }
