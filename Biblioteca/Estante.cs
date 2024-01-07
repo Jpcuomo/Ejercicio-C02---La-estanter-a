@@ -36,8 +36,11 @@ namespace Biblioteca
             sb.AppendLine($"Ubicación del estante: {estante._ubicacionEstante}");
             foreach (Producto producto in estante._productos)
             {
-                sb.AppendLine(Producto.MostrarProducto(producto));
-                sb.AppendLine("---------------------------------------------------");
+                if (producto is not null)
+                {
+                    sb.AppendLine(Producto.MostrarProducto(producto));
+                    sb.AppendLine("---------------------------------------------------");
+                }
             }
             return sb.ToString();
         }

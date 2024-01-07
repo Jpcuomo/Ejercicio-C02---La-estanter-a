@@ -10,7 +10,7 @@ namespace Ejercicio_C02___La_estantería
             Estante estante = new Estante(1, 5);
 
             // Creo 4 productos
-            Producto p1 = new Producto("Pepsi", "PESDS97413", (float)18.5);
+            Producto p1 = new Producto("Pepsi", "PESDS97413", 18.5f);
             Producto p2 = new Producto("Coca-Cola", "COSDS55752", (float)11.5);
             Producto p3 = new Producto("Manaos", "MASDS51292", (float)20.5);
             Producto p4 = new Producto("Crush", "CRSDS54861", (float)10.75);
